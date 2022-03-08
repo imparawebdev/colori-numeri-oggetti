@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style> 
-    .colori, .numeri, .oggetti {
+  <style>
+    .colori,
+    .numeri,
+    .oggetti {
       display: inline-block;
       background-color: rgb(206, 206, 206);
       width: 120px;
       height: 300px;
-      border: solid 1px black; 
-      list-style-type: none; 
+      border: solid 1px black;
+      list-style-type: none;
     }
 
-    .abc {
+    .container {
       text-align: center;
       margin-top: 5px;
       left: -20px;
@@ -28,46 +31,42 @@
       list-style-type: none;
     }
   </style>
-
 </head>
 
 <body>
-
   <h1 style="text-align: center;">Inserisci ogni Colore, Numero e Oggetto nel giusto quadrante</h1>
-  <div class="abc">
-  <div class="colori">
-    <h1 id="Uno">Colori</h1>
+  <div class="container">
+    <div class="colori">
+      <h1 id="Uno">Colori</h1>
+    </div>
+    <div class="numeri">
+      <h1 id="Due">Numeri</h1>
+    </div>
+    <div class="oggetti">
+      <h1 id="Tre">Oggetti</h1>
+    </div>
   </div>
-
-  <div class="numeri">
-    <h1 id="Due">Numeri</h1>
+  <div class="container">
+    <ul class="list">
+      <li>3124</li>
+      <li>Casa</li>
+      <li>845</li>
+      <li>Chitarra</li>
+      <li>Blu</li>
+      <li>Rosso</li>
+      <li>524</li>
+      <li>Sedia</li>
+      <li>Computer</li>
+      <li>24</li>
+      <li>Verde</li>
+      <li>Macchina</li>
+      <li>Mobile</li>
+      <li>Giallo</li>
+      <li>435</li>
+      <li>Viola</li>
+    </ul>
   </div>
-
-  <div class="oggetti">
-    <h1 id="Tre">Oggetti</h1>
-  </div>
-</div> 
-<div class="abc">
-<ul class="list">
-  <li>3124</li>
-  <li>Casa</li>
-  <li>845</li>
-  <li>Chitarra</li>
-  <li>Blu</li>
-  <li>Rosso</li>
-  <li>524</li>
-  <li>Sedia</li>
-  <li>Computer</li>
-  <li>24</li>
-  <li>Verde</li>
-  <li>Macchina</li>
-  <li>Mobile</li>
-  <li>Giallo</li>
-  <li>435</li>
-  <li>Viola</li>
-</ul>
-</div>
-
   <script src="app.js"></script>
 </body>
+
 </html>

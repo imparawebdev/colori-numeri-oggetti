@@ -1,31 +1,21 @@
-const colori = document.querySelector('.colori')
-const numeri = document.querySelector('.numeri')
-const oggetti = document.querySelector('.oggetti')
+const coloriDOM = document.querySelector('.colori')
+const numeriDOM = document.querySelector('.numeri')
+const oggettiDOM = document.querySelector('.oggetti')
+const listDOM = document.querySelector('.list')
 
-function appendColore() {
-  const element = document.querySelector('.list').firstElementChild;
-  document.querySelector('.colori').appendChild(element);
+function appendTo(DOMelement) {
+  const element = listDOM.firstElementChild;
+  DOMelement.appendChild(element);
 }
 
-colori.addEventListener('click', () => {
-  appendColore();
-}) 
-
-function appendNumeri() {
-  const element = document.querySelector('.list').firstElementChild;
-  document.querySelector('.numeri').appendChild(element);
-}
-
-numeri.addEventListener('click', () => {
-  appendNumeri(); 
+coloriDOM.addEventListener('click', () => {
+  appendTo(coloriDOM);
 })
 
+numeriDOM.addEventListener('click', () => {
+  appendTo(numeriDOM);
+})
 
-function appendOggetti() {
-  const element = document.querySelector('.list').firstElementChild;
-  document.querySelector('.oggetti').appendChild(element);
-}
-
-oggetti.addEventListener('click', () => {
-  appendOggetti();
+oggettiDOM.addEventListener('click', () => {
+  appendTo(oggettiDOM);
 })
