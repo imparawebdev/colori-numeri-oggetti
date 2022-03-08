@@ -7,10 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    .title {
+      margin: 40px;
+      text-transform: uppercase;
+    }
+
     .colori,
     .numeri,
     .oggetti {
-      display: inline-block;
+      /* display: inline-block; */
       background-color: rgb(206, 206, 206);
       width: 120px;
       height: 300px;
@@ -19,8 +30,12 @@
     }
 
     .container {
+      margin: 20px auto;
+      width: 40%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
       text-align: center;
-      margin-top: 5px;
       left: -20px;
       border: solid black 1px;
       padding: 20px;
@@ -29,21 +44,24 @@
     .list {
       text-align: center;
       list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   </style>
 </head>
 
 <body>
-  <h1 style="text-align: center;">Inserisci ogni Colore, Numero e Oggetto nel giusto quadrante</h1>
+  <h1 class="title" style="text-align: center;">Inserisci ogni Colore, Numero e Oggetto nel giusto quadrante</h1>
   <div class="container">
     <div class="colori">
-      <h1 id="Uno">Colori</h1>
+      <h1 class="categoria" id="Uno">Colori</h1>
     </div>
     <div class="numeri">
-      <h1 id="Due">Numeri</h1>
+      <h1 class="categoria" id="Due">Numeri</h1>
     </div>
     <div class="oggetti">
-      <h1 id="Tre">Oggetti</h1>
+      <h1 class="categoria" id="Tre">Oggetti</h1>
     </div>
   </div>
   <div class="container">
