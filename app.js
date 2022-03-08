@@ -9,11 +9,14 @@ const DOMelements = [
   oggettiDOM
 ]
 
+// accoda il primo elemento della lista di elementi
+// all'interno del div cliccato
 function appendFirstItemTo(DOMelement) {
   const listElement = listDOM.firstElementChild;
   DOMelement.appendChild(listElement);
 }
 
+// aggiunge un listenere per 'click' a ciascun div
 DOMelements.forEach(
   element => element.addEventListener('click', () => {
     appendFirstItemTo(element)
@@ -26,26 +29,16 @@ const items = {
   oggetti: ['Casa', 'Chitarra', 'Computer', 'Sedia']
 }
 
-items.numeri.forEach(
-  numero => {
-    const numeroLi = document.createElement('li')
-    numeroLi.innerText = numero
-    listDOM.appendChild(numeroLi)
-  }
-)
-
-items.colori.forEach(
-  colore => {
-    const coloreLi = document.createElement('li')
-    coloreLi.innerText = colore
-    listDOM.appendChild(coloreLi)
-  }
-)
-
-items.oggetti.forEach(
-  oggetto => {
-    const oggettoLi = document.createElement('li')
-    oggettoLi.innerText = oggetto
-    listDOM.appendChild(oggettoLi)
+// aggiunge gli elementi di ciascun array alla lista
+Object.keys(items).forEach(
+  key => {
+    const elements = items[key]
+    elements.forEach(
+      element => {
+        const li = document.createElement('li')
+        li.innerText = element
+        listDOM.appendChild(li)    
+      }
+    )
   }
 )
